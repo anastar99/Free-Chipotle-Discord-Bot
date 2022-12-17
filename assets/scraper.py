@@ -1,11 +1,11 @@
-url = 'https://twitter.com/ChipotleTweets'
-
+chipotle_url = 'https://twitter.com/ChipotleTweets'
+import requests
 
 
 class Shovel:
 
     def __init__(self):
-        self.run()
+        pass
 
     def newPost(self):
         pass
@@ -16,4 +16,11 @@ class Shovel:
         pass
 
     def go(self):
-         return # embed
+
+        r = requests.get(chipotle_url)
+        print(r.text)
+        return # embed
+
+
+if __name__ == "__main__":
+    Shovel().go()
